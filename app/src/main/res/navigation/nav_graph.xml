@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/peopleListFragment">
+
+
+    <fragment
+        android:id="@+id/peopleListFragment"
+        android:name="com.aziz.virginmoneytask.ui.peoplelist.PeopleListFragment"
+        android:label="PeopleListFragment"
+        tools:layout="@layout/fragment_people_list">
+        <action
+            android:id="@+id/action_peopleListFragment_to_peopleDetailsFragment"
+            app:destination="@id/peopleDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/peopleDetailsFragment"
+        android:name="com.aziz.virginmoneytask.ui.peoplelist.peopledetails.PeopleDetailsFragment"
+        android:label="fragment_people_details"
+        tools:layout="@layout/fragment_people_details" >
+        <action
+            android:id="@+id/action_peopleDetailsFragment_to_peopleListFragment"
+            app:destination="@id/peopleListFragment" />
+    </fragment>
+</navigation>

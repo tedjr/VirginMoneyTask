@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.peoplelist.peopledetails.PeopleDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/profile_background"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_profile_background"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_for_image"
+            android:layout_width="@dimen/person_image_width"
+            android:layout_height="@dimen/person_image_height"
+            android:layout_margin="2dp"
+            app:cardCornerRadius="100dp"
+            app:layout_constraintBottom_toBottomOf="@id/profile_background"
+            app:layout_constraintEnd_toEndOf="@id/profile_background"
+            app:layout_constraintStart_toStartOf="@id/profile_background"
+            app:layout_constraintTop_toTopOf="@id/profile_background">
+
+            <ImageView
+                android:id="@+id/person_image"
+                android:layout_width="@dimen/person_image_width"
+                android:layout_height="@dimen/person_image_height"
+                android:background="@drawable/ic_round_background"
+                android:contentDescription="@null"
+                android:foregroundGravity="center" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="-25dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_background">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/person_first_name"
+                        style="@style/titleText"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/profile_background" />
+                    <TextView
+                        android:id="@+id/person_last_name"
+                        style="@style/titleText"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/person_first_name"
+                        app:layout_constraintTop_toBottomOf="@id/profile_background" />
+                    <TextView
+                        android:id="@+id/person_job_title"
+                        style="@style/contentText"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/person_first_name" />
+
+                    <TextView
+                        android:id="@+id/person_email"
+                        style="@style/contentText"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/person_first_name" />
+
+                    <TextView
+                        android:id="@+id/person_telephone"
+                        style="@style/contentText"
+                        android:drawableLeft="@drawable/ic_telephone"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/person_email" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
